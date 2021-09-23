@@ -14,17 +14,30 @@ class Card
     @rank = rank
     @suit = suit
     @score = score
+    @deck = []
   end
 
-  def random_test
+  def random_card
     @rank = CARD_SCORES.to_a.sample[0]
     @suit = CARD_SUITS.sample
     @score = CARD_SCORES.to_a.sample[0]
   end
+
+  def random_deck
+    CARD_SCORES.each do |rank, score|
+      CARD_SUITS.each do |suit|
+        @deck.push(Card.new(rank,suit,score))
+      end
+    end
+  end
+
 end
 
 card = Card.new('1','2','3')
 p card
 
-card.random_test
+card.random_deck
 p card
+
+# card.random_card
+# p card
