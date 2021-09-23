@@ -1,1 +1,1 @@
-read me
+Карточная игра Black Jack

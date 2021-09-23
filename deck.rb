@@ -1,4 +1,4 @@
-require_relative 'card'
+require_relative 'require'
 
 class Deck
 
@@ -18,7 +18,7 @@ class Deck
     end
   end
 
-  def give_a_card
+  def draw_card
     @full_deck.shift
   end
 
