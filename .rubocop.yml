@@ -1,9 +1,5 @@
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
 Style/StringLiterals:
   Enabled: false
-
 
 Style/Documentation:
   Enabled: false
@@ -14,3 +10,8 @@ Metrics/LineLength:
 Style/ClassVars:
   Enabled: false
 
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false

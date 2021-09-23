@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'require'
 
 class Main
-
   def initialize
     @bank = Bank.new
     @dealer = Player.new('Dealer')
@@ -9,7 +10,6 @@ class Main
     create_player
     @interface = Interface.new
   end
-
 
   def create_player
     print "Введите имя пользователя: "
@@ -65,5 +65,3 @@ class Main
 end
 
 Main.new.start_game
-
-

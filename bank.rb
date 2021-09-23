@@ -1,5 +1,6 @@
-class Bank
+# frozen_string_literal: true
 
+class Bank
   STANDARD_BET = 10
   attr_accessor :bank
 
@@ -29,7 +30,3 @@ class Bank
     dealer.player_money > STANDARD_BET
   end
 end
-
-
-
-

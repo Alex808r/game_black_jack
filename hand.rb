@@ -1,5 +1,6 @@
-class Hand
+# frozen_string_literal: true
 
+class Hand
   attr_accessor :scores, :cards, :total_scores
 
   def initialize
@@ -34,5 +35,4 @@ class Hand
   def cards(&block)
     @cards.each(&block)
   end
-
 end

@@ -1,5 +1,6 @@
-class Interface
+# frozen_string_literal: true
 
+class Interface
   attr_accessor :player, :bank, :deck, :round_number, :choice
 
   BET = 10
@@ -20,16 +21,16 @@ class Interface
   end
 
   def info(player, dealer)
-    puts "#{'*' * 25}"
+    puts ('*' * 25).to_s
     puts "Раунд № #{@round_number}"
     puts "#{player.name} —  #{player.player_money}"
     puts "#{dealer.name} —  #{dealer.player_money}"
-    puts "#{'*' * 25}"
+    puts ('*' * 25).to_s
     @round_number += 1
   end
 
   def player_bet(player)
-    #player.bank -= BET
+    # player.bank -= BET
     player.bank -= Bank::STANDARD_BET
   end
 
@@ -85,10 +86,10 @@ class Interface
   end
 
   def game_results(dealer, player, bank)
-    puts "#{'*' * 25}"
+    puts ('*' * 25).to_s
     if (dealer.hand.scores > player.hand.scores) && (dealer.hand.scores <= 21)
       bank.winner(dealer)
-      puts  '     Вы проиграли'
+      puts '     Вы проиграли'
     elsif (dealer.hand.scores <= 21) && (player.hand.scores > 21)
       bank.winner(dealer)
       puts '     Вы проиграли'
@@ -101,8 +102,6 @@ class Interface
       bank.winner(player)
       puts 'Поздравляем, Банк Ваш!'
     end
-    puts "#{'*' * 25}"
+    puts ('*' * 25).to_s
   end
-
 end
-

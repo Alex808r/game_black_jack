@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'require'
 
 class Deck
-
   attr_accessor :full_deck
 
   def initialize
@@ -13,7 +14,7 @@ class Deck
   def create_random_deck
     Card::CARD_SCORES.each do |rank, score|
       Card::CARD_SUITS.each do |suit|
-        @full_deck.push(Card.new(rank,suit.encode('utf-8'),score))
+        @full_deck.push(Card.new(rank, suit.encode('utf-8'), score))
       end
     end
   end
@@ -21,7 +22,6 @@ class Deck
   def draw_card
     @full_deck.shift
   end
-
 end
 
 # ddd = Deck.new

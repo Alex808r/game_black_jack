@@ -1,6 +1,6 @@
+# frozen_string_literal: true
 
 class Player
-
   attr_accessor :cards, :bank, :hand, :player_money
   attr_reader :total_scores, :name
 
@@ -18,4 +18,3 @@ class Player
     @player_money += bank
   end
 end
-
