@@ -14,7 +14,6 @@ class Card
     @rank = rank
     @suit = suit
     @score = score
-    @deck = []
   end
 
   def random_card

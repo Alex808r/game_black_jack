@@ -18,13 +18,22 @@ class Deck
     end
   end
 
+  def give_a_card
+    @full_deck.shift
+  end
+
 end
 
-d = Deck.new
-p d
+# ddd = Deck.new
+# p ddd.full_deck.size
+# p ddd.give_a_card
+# p ddd.full_deck.size
 
-d.create_random_deck
-x = d.full_deck
-y = x.each{|card| print card.rank; print card.suit}
-y.shuffle!
-p y
+# d = Deck.new
+# p d
+#
+# d.create_random_deck
+# x = d.full_deck
+# y = x.each{|card| print card.rank; print card.suit}
+# y.shuffle!
+# p y
