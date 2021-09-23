@@ -8,8 +8,8 @@ class Card
     'A' => 11
   }
 
-  CARD_SUITS = %w[крести буби черви вини]
-
+  #CARD_SUITS = %w[вини крести черви буби ]
+  CARD_SUITS = ["\u2660", "\u2663", "\u2665", "\u2666"]
   def initialize(rank, suit, score)
     @rank = rank
     @suit = suit
@@ -18,17 +18,17 @@ class Card
 
   def random_card
     @rank = CARD_SCORES.to_a.sample[0]
-    @suit = CARD_SUITS.sample
+    @suit = CARD_SUITS.sample.encode('utf-8')
     @score = CARD_SCORES.to_a.sample[0]
   end
 
 end
 
-# card = Card.new('1','2','3')
-# p card
-#
-# card.random_deck
-# p card
+card = Card.new('1','2','3')
+p card
+
+card.random_card
+p card
 
 # card.random_card
 # p card

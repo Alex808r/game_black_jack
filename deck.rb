@@ -13,7 +13,7 @@ class Deck
   def create_random_deck
     Card::CARD_SCORES.each do |rank, score|
       Card::CARD_SUITS.each do |suit|
-        @full_deck.push(Card.new(rank,suit,score))
+        @full_deck.push(Card.new(rank,suit.encode('utf-8'),score))
       end
     end
   end
